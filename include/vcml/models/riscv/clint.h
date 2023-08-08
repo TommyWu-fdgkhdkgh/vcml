@@ -29,8 +29,6 @@ private:
     sc_time m_time_reset;
     sc_event m_trigger;
 
-    u64 get_cycles() const;
-
     u32 read_msip(size_t hart);
     void write_msip(u32 val, size_t hart);
     void write_mtimecmp(u64 val, size_t hart);
@@ -59,6 +57,9 @@ public:
     VCML_KIND(riscv::clint);
 
     virtual void reset() override;
+
+    // TODO : Workaround by fdgk
+    u64 get_cycles() const;
 };
 
 } // namespace riscv
