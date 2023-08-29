@@ -118,6 +118,7 @@ add_library(vcml STATIC
     ${src}/vcml/models/serial/backend.cpp
     ${src}/vcml/models/serial/terminal.cpp
     ${src}/vcml/models/serial/uart8250.cpp
+    ${src}/vcml/models/serial/sifive_uart.cpp
     ${src}/vcml/models/serial/pl011.cpp
     ${src}/vcml/models/serial/nrf51.cpp
     ${src}/vcml/models/timers/rtc1742.cpp
