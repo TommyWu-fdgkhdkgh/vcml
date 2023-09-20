@@ -140,6 +140,8 @@
 #include "vcml/models/riscv/plic.h"
 #include "vcml/models/riscv/simdev.h"
 
+#include "vcml/models/dma/sifive_pdma.h"
+
 #include "vcml/models/deprecated.h"
 
 #endif

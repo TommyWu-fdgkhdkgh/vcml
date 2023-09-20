@@ -169,7 +169,8 @@ add_library(vcml STATIC
     ${src}/vcml/models/arm/gic400.cpp
     ${src}/vcml/models/riscv/clint.cpp
     ${src}/vcml/models/riscv/plic.cpp
-    ${src}/vcml/models/riscv/simdev.cpp)
+    ${src}/vcml/models/riscv/simdev.cpp
+    ${src}/vcml/models/dma/sifive_pdma.cpp)
 
 set_target_properties(vcml PROPERTIES DEBUG_POSTFIX "d")
 set_target_properties(vcml PROPERTIES CXX_CLANG_TIDY "${VCML_LINTER}")
