@@ -174,6 +174,7 @@ sifive_uart::sifive_uart(const sc_module_name& nm):
     serial_rx("serial_rx"),
     irq("irq"),
     in("in") {
+
     txdata.allow_read_write();
     txdata.on_read(&sifive_uart::read_txdata);
     txdata.on_write(&sifive_uart::write_txdata);
