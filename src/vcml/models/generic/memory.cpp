@@ -62,7 +62,7 @@ void memory::copy_image(const u8* image, u64 sz, u64 off) {
 }
 
 memory::memory(const sc_module_name& nm, u64 sz, bool read_only, alignment al,
-               unsigned int rl, unsigned int wl):
+               unsigned int rl, unsigned int wl, string shared):
     peripheral(nm, host_endian(), rl, wl),
     debugging::loader(*this, true),
     m_memory(),
@@ -70,7 +70,7 @@ memory::memory(const sc_module_name& nm, u64 sz, bool read_only, alignment al,
     align("align", al),
     discard_writes("discard_writes", false),
     readonly("readonly", read_only),
-    shared("shared", ""),
+    shared("shared", shared),
     images("images"),
     poison("poison", 0x00),
     in("in") {

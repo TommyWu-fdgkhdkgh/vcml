@@ -55,7 +55,7 @@ public:
 
     memory(const sc_module_name& name, u64 size, bool read_only = false,
            alignment al = VCML_ALIGN_NONE, unsigned int read_latency = 0,
-           unsigned int write_latency = 0);
+           unsigned int write_latency = 0, string shared = "");
     virtual ~memory();
     VCML_KIND(memory);
     virtual void reset() override;
