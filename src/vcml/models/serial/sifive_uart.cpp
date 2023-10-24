@@ -202,11 +202,8 @@ sifive_uart::sifive_uart(const sc_module_name& nm):
     div.on_write(&sifive_uart::write_div);
 
     serial_tx.set_baud(DEFAULT_BAUD);
-    // TODO
-    // serial_tx.set_data_width(uart8250_data_bits(lcr));
 
     div = clock_hz() / DEFAULT_BAUD;
-    // TODO : modify div
 }
 
 sifive_uart::~sifive_uart() {

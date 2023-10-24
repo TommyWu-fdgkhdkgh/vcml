@@ -76,7 +76,6 @@ public:
     property<u64> tx_fifo_size;
     property<u64> rx_fifo_size;
 
-    // enum : baud_t { DEFAULT_BAUD = SERIAL_9600BD };
     enum : baud_t { DEFAULT_BAUD = SERIAL_115200BD };
 
     reg<u32> txdata; // Transmit data register
