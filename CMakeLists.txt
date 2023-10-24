@@ -23,7 +23,7 @@ option(VCML_COVERAGE "Enable generation of code coverage data" OFF)
 set(VCML_LINTER "" CACHE STRING "Code linter to use")
 
 include(cmake/common.cmake)
-find_github_repo(mwr "machineware-gmbh/mwr")
+find_github_repo(mwr "machineware-gmbh/mwr" v2023.10.21)
 find_package(Git REQUIRED)
 find_package(SystemC "2.3.0" REQUIRED)
 
