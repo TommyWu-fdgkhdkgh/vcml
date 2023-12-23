@@ -29,7 +29,6 @@ private:
     sc_time m_time_reset;
     sc_event m_trigger;
 
-    u64 get_cycles() const;
 
     u32 read_msip(size_t hart);
     void write_msip(u32 val, size_t hart);
@@ -53,6 +52,9 @@ public:
     gpio_initiator_array irq_timer;
 
     tlm_target_socket in;
+
+    // workaround for spike-vp
+    u64 get_cycles() const;
 
     clint(const sc_module_name& nm);
     virtual ~clint();
